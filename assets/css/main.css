@@ -1123,6 +1123,8 @@
 			list-style: none;
 			padding: 0;
 			position: absolute;
+			bottom: 1em;
+			left: 1em;
 		}
 
 			#footer .copyright li {
