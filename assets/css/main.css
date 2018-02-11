@@ -1111,7 +1111,7 @@
 		color: rgba(255, 255, 255, 0.5);
 		left: 4em;
 		opacity: 0.5;
-		position: fixed;
+		position: relative;
 	}
 
 		#footer .icons {
@@ -1122,6 +1122,9 @@
 			font-size: 0.8em;
 			list-style: none;
 			padding: 0;
+			position: absolute;
+			bottom: 0em;
+			left: 1em;
 		}
 
 			#footer .copyright li {
