@@ -1109,9 +1109,9 @@
 		transition: opacity 0.5s ease-in-out;
 		bottom: 1em;
 		color: rgba(255, 255, 255, 0.5);
-		left: 4em;
+		left: 1em;
 		opacity: 0.5;
-		position: relative;
+		position: absolute;
 	}
 
 		#footer .icons {
@@ -1122,9 +1122,6 @@
 			font-size: 0.8em;
 			list-style: none;
 			padding: 0;
-			position: absolute;
-			bottom: 1em;
-			left: 1em;
 		}
 
 			#footer .copyright li {
