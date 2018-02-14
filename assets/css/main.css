@@ -1107,7 +1107,7 @@
 		-webkit-transition: opacity 0.5s ease-in-out;
 		-ms-transition: opacity 0.5s ease-in-out;
 		transition: opacity 0.5s ease-in-out;
-		bottom: 1em;
+		bottom: 0;/*1em;*/
 		color: rgba(255, 255, 255, 0.5);
 		left: 1em;
 		opacity: 0.5;
@@ -1154,7 +1154,7 @@
 		@media screen and (max-width: 1680px) {
 
 			#footer {
-				bottom: 3.5em;
+				bottom: 0;/*3.5em;*/
 				left: 3.5em;
 			}
 
@@ -1163,7 +1163,7 @@
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				bottom: 2em;
+				bottom: 0;/*2em;*/
 				left: 2em;
 			}
 
@@ -1172,7 +1172,7 @@
 		@media screen and (max-width: 360px) {
 
 			#footer {
-				bottom: 1.25em;
+				bottom: 0;/*1.25em;*/
 				left: 1.25em;
 			}
 
@@ -1181,7 +1181,7 @@
 		@media screen and (max-height: 640px) {
 
 			#footer {
-				bottom: auto;
+				bottom: 0;/*auto;*/
 				left: auto;
 				margin: 1em 0 0 0;
 				position: relative;
