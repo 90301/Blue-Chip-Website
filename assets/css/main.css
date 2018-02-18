@@ -84,7 +84,7 @@
 		@media screen and (max-height: 640px) {
 
 			html, body {
-				height: auto;
+				height: 100%;
 				min-height: 100%;
 			}
 
@@ -1182,9 +1182,11 @@
 
 			#footer {
 				bottom: 0;/*auto;*/
+                /*
 				left: auto;
 				margin: 1em 0 0 0;
 				position: relative;
+                */
 			}
 
 		}
