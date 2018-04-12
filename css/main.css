@@ -1,6 +1,9 @@
-
-div.bluechip-logo {
-    content: url('../images/logo2.png');
-    width: 60%;
-    margin: auto;
- }
+#background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: center / cover repeat url('../images/bg01.jpeg');
+  z-index: -1;
+}
