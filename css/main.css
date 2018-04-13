@@ -4,6 +4,17 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: center / cover repeat url('../images/bg01.jpeg');
+  background: center / cover repeat url('../images/bg03.png');
   z-index: -1;
+}
+
+#blue-chip-logo {
+    content: url('../images/logo2.png');
+    margin: auto auto;
+    width: 50%;
+}
+#blue-chip-text {
+    margin: auto;
+    text-align: center;
+    color: #9CF;
 }
