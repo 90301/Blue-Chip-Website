@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+
 #background {
   position: fixed;
   top: 0;
@@ -14,7 +16,9 @@
     width: 50%;
 }
 #blue-chip-text {
+    font-family: Aldrich,sans-serif;
+    font-size: 3.25em;
     margin: auto;
     text-align: center;
-    color: #9CF;
+    color: #FFFFFF;
 }
