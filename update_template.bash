@@ -14,7 +14,9 @@ update_template () {
     src_linenos=( $(find_content "$src") )
     template_lineno="$(find_content template.html)"
     head -n "$template_lineno" template.html > "$target"
-    sed -n "$((src_linenos[0] + 1)),$((src_linenos[-1] - 1))p" "$src" >> "$target"
+    if [ "$((src_linenos[0] + 1))" -lt "$((src_linenos[-1] - 1))" ]; then
+        sed -n "$((src_linenos[0] + 1)),$((src_linenos[-1] - 1))p" "$src" >> "$target"
+    fi
     tail -n "+$template_lineno" template.html >> "$target"
     mv "$target" "$src"
 }
