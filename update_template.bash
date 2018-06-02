@@ -25,6 +25,5 @@ update_template index.html
 update_template datacenters.html
 update_template publications.html
 update_template team.html
-update_template contact.html
 update_template construction.html
 update_template computers.html
