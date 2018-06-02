@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich');
+
+#background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: center / cover repeat url('../images/bg03.png');
+  z-index: -1;
+}
+
+#blue-chip-logo {
+    content: url('../images/logo2.png');
+    margin: auto auto;
+    width: 50%;
+}
+#blue-chip-text {
+    font-family: Aldrich,sans-serif;
+    font-size: 3.25em;
+    margin: auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.datacenter-content {
+    background-color: #494e6b80;
+    color: #FFFFFF;
+}
+.graph {
+    background-color: #FFFFFF;
+}
