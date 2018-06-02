@@ -19,7 +19,6 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-          <img src="images/logo2.png" width="53" height="30" class="d-inline-block align-top"/>
           Blue Chip AI
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -32,7 +31,6 @@
             <a class="nav-item nav-link active-candidate" href="datacenters.html">Open Compute</a>
             <a class="nav-item nav-link active-candidate" href="publications.html">Publications</a>
             <a class="nav-item nav-link active-candidate" href="team.html">Team</a>
-            <a class="nav-item nav-link active-candidate" href="contact.html">Contact Us</a>
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="affiliatedDropdown" role="button" data-toggle="dropdown"
                  aria-haspopup="true" aria-expanded="false">
@@ -59,10 +57,10 @@
       <div class="container">
 	    <!-- CONTENT -->
         <div class="row">
-          <div class="col-5">
-            <img src="images/CompleteBluechip_Crop.png" style="width:100%;">
+          <div class="col-6">
+            <img src="images/CompleteBluechip_Crop.png" class="rounded" style="width:100%;">
           </div>
-      <div class="col-6 datacenter-content">
+      <div class="col datacenter-content">
         <h1>Centralization</h1>
         <p>
         Blue Chip AI's data centers strive to be the most cost effective and environmentally friendly data centers in the US.
@@ -82,7 +80,7 @@
         </div>
 
         <div class="row">
-          <div class="col-5 datacenter-content">
+          <div class="col datacenter-content">
             <h1>Cost Effectiveness</h1>
             <p>
               Blue Chip AI utilizes modified decomissioned hardware to build clusters at 1/10th to 1/100th the cost of comparable new systems.
@@ -95,7 +93,7 @@
             </p>
           </div>
           <div class="col-6">
-            <img class="graph" src="images/powerUsage.svg" style="width:100%">
+            <img src="images/powerUsage3.svg" style="width:100%">
           </div>
 
         </div>
@@ -115,5 +113,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+    <script>
+        function deobfuscateEmail(t, mailto) {
+            t = decodeURIComponent(t);
+            s = '';
+            for (var i = 0; i < t.length; ++i) {
+                var c = t.charCodeAt(i);
+                if (mailto) {
+                    s += String.fromCharCode(c ^ 0x1f);
+                } else {
+                    s += '&#' + (c ^ 0x1f) + ';<span style="display:none">@</span>';
+                }
+            }
+            return s;
+        }
+
+        {
+            var emailRegex = /^@@([jkhinolmbc]{4})<code>([%\/_.\-a-zA-Z0-9]+)<\/code>\1@@$/;
+            $('a').each(function() {
+                var href = $(this).attr('href');
+                var hrefm = emailRegex.exec(href);
+                if (hrefm != null) {
+                    $(this).attr('href', deobfuscateEmail(hrefm[2], true));
+                }
+                var html = $(this).html();
+                var htmlm = emailRegex.exec(html);
+                if (htmlm != null) {
+                    $(this).html(deobfuscateEmail(htmlm[2], false));
+                }
+            });
+        }
+    </script>
   </body>
 </html>
