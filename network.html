@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Blue Chip AI</title>
+  </head>
+  <body>
+    <div id="background"></div>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          Blue Chip AI
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active-candidate" href="index.html">Home</a>
+            <a class="nav-item nav-link active-candidate" href="datacenters.html">Open Compute</a>
+            <a class="nav-item nav-link active-candidate" href="publications.html">Publications</a>
+            <a class="nav-item nav-link active-candidate" href="team.html">Team</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="affiliatedDropdown" role="button" data-toggle="dropdown"
+                 aria-haspopup="true" aria-expanded="false">
+                Affiliated Projects
+              </a>
+              <div class="dropdown-menu" aria-labelledby="affiliatedDropdown">
+                <a class="dropdown-item active-candidate" href="construction.html">Blue Chip Construction</a>
+                <a class="dropdown-item active-candidate" href="computers.html">Blue Chip Computers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          Array.prototype.slice.call(document.getElementsByClassName("active-candidate")).some(function(element) {
+            if (element.href == window.location.href) {
+              element.className += " active";
+            }
+          });
+        </script>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="container">
+	    <!-- CONTENT -->
+        <h1>Scientific Network</h1>
+
+
+	    <!-- CONTENT -->
+      </div>
+    </main>
+
+    <!-- End of Background Div -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <script>
+        function deobfuscateEmail(t, mailto) {
+            t = decodeURIComponent(t);
+            s = '';
+            for (var i = 0; i < t.length; ++i) {
+                var c = t.charCodeAt(i);
+                if (mailto) {
+                    s += String.fromCharCode(c ^ 0x1f);
+                } else {
+                    s += '&#' + (c ^ 0x1f) + ';<span style="display:none">@</span>';
+                }
+            }
+            return s;
+        }
+
+        {
+            var emailRegex = /^@@([jkhinolmbc]{4})<code>([%\/_.\-a-zA-Z0-9]+)<\/code>\1@@$/;
+            $('a').each(function() {
+                var href = $(this).attr('href');
+                var hrefm = emailRegex.exec(href);
+                if (hrefm != null) {
+                    $(this).attr('href', deobfuscateEmail(hrefm[2], true));
+                }
+                var html = $(this).html();
+                var htmlm = emailRegex.exec(html);
+                if (htmlm != null) {
+                    $(this).html(deobfuscateEmail(htmlm[2], false));
+                }
+            });
+        }
+    </script>
+  </body>
+</html>
