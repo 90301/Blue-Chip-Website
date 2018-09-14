@@ -27,3 +27,5 @@ update_template publications.html
 update_template team.html
 update_template construction.html
 update_template computers.html
+update_template internships.html
+update_template network.html
