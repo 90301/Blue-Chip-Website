@@ -36,6 +36,10 @@ h4, h5, h6 {
     font-style: italic;
 }
 
+.navbar-nav {
+    font-size: 0.95em;
+}
+
 body {
     background-color: #000010;
     font-size: 1.2em;

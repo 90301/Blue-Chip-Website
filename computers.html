@@ -5,6 +5,20 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
+    <!-- Google Analytics (without cookies, so we don't have to display a banner) -->
+    <script src="https://cdn.jsdelivr.net/npm/fingerprintjs2@1.8.1/dist/fingerprint2.min.js"
+            integrity="sha384-Hmc8xgdoGHcb9paCqzt8zrpv6cildmZk6GupiZigSO+p7llS6rXU2/GMUUaUrD0O"
+            crossorigin="anonymous"></script>
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        new Fingerprint2({detectScreenOrientation: false}).get(function(result) {
+            ga('create', 'UA-125826709-1', {'storage': 'none', 'clientId': result});
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        });
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -67,7 +81,9 @@
         </div>
         <div class="row">
           <div class="col-6">
-            <img src="images/CompleteBluechip_Crop.jpg" class="rounded" style="width:100%;">
+            <img src="images/CompleteBluechip_Crop.jpg" class="rounded" style="width:100%;"
+                  srcset="images/CompleteBluechip_Crop.jpg 1506w, images/CompleteBluechip_Crop-800.jpg 800w"
+                  sizes="(min-width: 992px) 1400px, 800px"/>
           </div>
           <div class="col datacenter-content" style="margin-right: 12px;">
             <h1>Blue Chip AI for your Datacenter</h1>
