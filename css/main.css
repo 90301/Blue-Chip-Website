@@ -6,15 +6,19 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: center / cover repeat url('../images/bg03.png');
+  background: center / cover repeat url('../images/bg03i.png');
   z-index: -1;
 }
 
-#blue-chip-logo {
-    content: url('../images/logo2.png');
+#blue-chip-logo, #blue-chip-logo img {
     margin: auto auto;
-    width: 50%;
+    text-align: center;
+    padding: 12px;
+    max-height: 50vh;
+    max-width: 100%;
 }
+
+
 #blue-chip-text {
     font-family: Aldrich,sans-serif;
     font-size: 3.25em;
@@ -23,9 +27,43 @@
     color: #FFFFFF;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
+
+h4, h5, h6 {
+    margin-left: 1em;
+    font-style: italic;
+}
+
+body {
+    background-color: #000010;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+p {
+    margin: 8px;
+}
+
+.row {
+    margin-top: 12px;
+}
+
+.rounded {
+    border-radius: 16px !important;
+}
+
+.smalltext {
+    font-size: 0.9em;
+    line-height: 1.25em;
+}
+
 .datacenter-content {
-    background-color: #494e6b80;
+    background-color: rgba(43, 48, 77, 0.85);
     color: #FFFFFF;
+    padding: 0 4px;
+    border-radius: 16px;
 }
 .graph {
     background-color: #FFFFFF;

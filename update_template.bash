@@ -11,6 +11,7 @@ update_template () {
         printf '<!-- CONTENT -->\n<!-- CONTENT -->\n' > "$src"
     fi
     target=".$src.tmp"
+    title_line="$(egrep '^\s*<title>.*</title>\s*$' "$src" | head -n1)"
     src_linenos=( $(find_content "$src") )
     template_lineno="$(find_content template.html)"
     head -n "$template_lineno" template.html > "$target"
@@ -19,6 +20,7 @@ update_template () {
     fi
     tail -n "+$template_lineno" template.html >> "$target"
     mv "$target" "$src"
+    ( echo "$title_line" ; cat "$target" ) | sed -n '1{h;n};/\s*<title>.*</title>\s*$/{g;p;n};p'
 }
 
 update_template index.html
