@@ -19,8 +19,9 @@ update_template () {
         sed -n "$((src_linenos[0] + 1)),$((src_linenos[-1] - 1))p" "$src" >> "$target"
     fi
     tail -n "+$template_lineno" template.html >> "$target"
-    mv "$target" "$src"
-    ( echo "$title_line" ; cat "$target" ) | sed -n '1{h;n};/\s*<title>.*</title>\s*$/{g;p;n};p'
+    ( echo "$title_line" ; cat "$target" ) \
+        | sed -n '1{h;n};/^\s*<title>.*<\/title>\s*$/{g;p;n};p' >"$src"
+    rm "$target"
 }
 
 update_template index.html
