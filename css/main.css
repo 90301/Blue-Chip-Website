@@ -27,12 +27,48 @@
     color: #FFFFFF;
 }
 
-h1, h2, h3 {
+#mobile-title {
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+@media (max-width: 576px) {
+    #mobile-title {
+        top: 16px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 476px) {
+    #mobile-title {
+        top: 19px;
+        margin-left: 38px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 376px) {
+    #mobile-title {
+        top: 20px;
+        margin-left: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 8px;
     text-align: center;
 }
 
 h4, h5, h6 {
-    margin-left: 1em;
+    margin-top: -8px;
+    padding-bottom: 4px;
     font-style: italic;
 }
 

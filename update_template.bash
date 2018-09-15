@@ -12,6 +12,7 @@ update_template () {
     fi
     target=".$src.tmp"
     title_line="$(egrep '^\s*<title>.*</title>\s*$' "$src" | head -n1)"
+    mobile_line="$(egrep '^\s*<h3 id="mobile-title".*</h3>\s*$' "$src" | head -n1)"
     src_linenos=( $(find_content "$src") )
     template_lineno="$(find_content template.html)"
     head -n "$template_lineno" template.html > "$target"
@@ -19,8 +20,9 @@ update_template () {
         sed -n "$((src_linenos[0] + 1)),$((src_linenos[-1] - 1))p" "$src" >> "$target"
     fi
     tail -n "+$template_lineno" template.html >> "$target"
-    ( echo "$title_line" ; cat "$target" ) \
-        | sed -n '1{h;n};/^\s*<title>.*<\/title>\s*$/{g;p;n};p' >"$src"
+    ( echo "$mobile_line" ; ( echo "$title_line" ; cat "$target" ) \
+        | sed -n '1{h;n};/^\s*<title>.*<\/title>\s*$/{g;p;n};p' ) \
+        | sed -n '1{h;n};/^\s*<h3 id="mobile-title".*<\/h3>\s*$/{g;p;n};p' >"$src"
     rm "$target"
 }
 
