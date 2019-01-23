@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Aldrich');
 
-main, div {
+body, main, div {
     background: none;
     background-color: transparent;
 }
